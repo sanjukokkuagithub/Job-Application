@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Job Application</title>
+<style>
+.container{
+ max-width:900px;
+ margin:0 auto;
+}
+body{
+ background-color:skyblue;
+}
+h1{
+ text-align:center;
+ margin-top:30px;
+}
+.apply-box{
+ max-width:500px;
+ padding:10px;
+ background-color:white;
+ margin:0 auto;
+ margin-top:50px;
+ box-shadow:5px 3px 4px rgba(3,4,3,0.5);
+ border-radius:20px;
+ border:1px solid black;
+}
+.small_title{
+ font-size:20px;
+}
+.form_container{
+ display:grid;
+ gap:20px;
+ margin-top:5px;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+
+}
+.form_control{
+ display:flex;
+ flex-direction:column;
+}
+input, select, textarea{
+ padding:9px 5px;
+ border:1px solid gray;
+ border-radius:5px;
+ font-size:12px;
+ margin:30 10px;
+}
+label{
+ margin-bottom:8px;
+}
+.text_control textarea{
+width:100%;
+}
+ .button_container{
+ display:flex;
+ justify-content:flex-end;
+ margin-top:10px;
+}
+button{
+ background-color:black;
+ color:white;
+ border:2px solid white;
+ padding:10px 15px;
+ border-radius:8px;
+}
+button:hover{
+ background-color:pink;
+ color:black;
+ transition:0.5s;
+ cursor:pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="apply-box">
+<h1><u>Job Application</u>
+<span class="small_title">(WEB)</span></h1>
+<form action=" ">
+ <div class="form_container">
+ <div class="form_control">
+ <label for="firstname">First Name: </label>
+ <input type="text" name="first_name" placeholder="enter first name.." required">
+ </div>
+<div class="form_control">
+ <label for="lastname">Last Name: </label>
+ <input type="text" name="last_name" placeholder="enter last name.." required">
+ </div>
+<div class="form_control">
+ <label for="email">Email: </label>
+ <input type="email" name="email" placeholder="enter your Email.." required">
+ </div>
+<div class="form_control">
+ <label for="job_role">Job Role: </label>
+<select id="job_role">
+ <option value="">Select Job Role</option>
+ <option value="full_stack">Full Stack Developer</option>
+ <option value="frontend">Frontend Developer</option>
+ <option value="backend">Backend Developer</option>
+ <option value="ui_ux">UI UX Designer</option>
+</select>
+</div>
+<div class="text_control">
+ <label for="text">Address: </label>
+ <textarea id="address" name="address" row="4" column="50" placeholder="Enter address.."></textarea>
+</div>
+<div class="form_control">
+ <label for="city">City: </label>
+ <input type="text" name="city" placeholder="enter city.." required">
+ </div>
+ <div class="form_control">
+ <label for="pincode">Pincode: </label>
+ <input type="number" name="pincode" placeholder="enter pincode.." required">
+</div>
+<div class="form_control">
+ <label for="year">Passout Year: </label>
+ <input type="number" name="year" placeholder="enter passout year.." required">
+ </div>
+<div class="form_control">
+ <label for="upload">Upload Resume/CV: </label>
+ <input type="file" name="upload" placeholder="enter your resume/cv.." required">
+ </div>
+</div>
+<div class="button_container">
+<button type="submit">Apply Now</button> 
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
